@@ -49,10 +49,11 @@ public class createIndexAPITests {
 	@Test
 	  public void getIndexTest() throws IOException {
 		  
-			GetIndexRequest request = new GetIndexRequest("new_index");
-			boolean exists = client.indices().exists(request, RequestOptions.DEFAULT);
+		GetIndexRequest request = new GetIndexRequest("new_index");
+		boolean exists = client.indices().exists(request, RequestOptions.DEFAULT);
 		
-			assertTrue(exists);
+		assertTrue(exists);
+		  
 	}
 	
 	
@@ -88,8 +89,7 @@ public class createIndexAPITests {
 		    client.indices().delete(request, RequestOptions.DEFAULT);
 		} catch (ElasticsearchException exception) {
 		    if (exception.status() == RestStatus.NOT_FOUND) {
-		    	System.out.println("Index not Found");
-		        
+		    	System.out.println("Index not Found"); 
 		    }
 		}
 		
