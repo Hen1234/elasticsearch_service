@@ -27,7 +27,6 @@ public class deleteIndexAPITests {
 		CreateIndexRequest createRrequest = new CreateIndexRequest("new_index1");
 		client.indices().create(createRrequest, RequestOptions.DEFAULT);
 		
-		
 	}
 	
 	
@@ -41,6 +40,7 @@ public class deleteIndexAPITests {
 		boolean exists = client.indices().exists(request, RequestOptions.DEFAULT);
 	
 		assertTrue(!exists);
+		
 	}
 	
 	
@@ -54,11 +54,10 @@ public class deleteIndexAPITests {
 		    DeleteIndexRequest request = new DeleteIndexRequest("new_index1");
 		    client.indices().delete(request, RequestOptions.DEFAULT);
 		} catch (ElasticsearchException exception) {
-		    assertEquals (exception.status(),RestStatus.NOT_FOUND);
-		    	 
+		    assertEquals (exception.status(),RestStatus.NOT_FOUND);  	 
 		}
+		
 	}
-	
 	
 	
 	@Test 
