@@ -1,5 +1,5 @@
 # elasticsearch_service
-  The service starts an elasticserach container using Docker API and tests creating and deleting Index API.
+  The service starts an elasticsearch container using Docker API and tests creating and deleting Index API.
 
 	
 ## Setup Instructions
