@@ -7,9 +7,9 @@
 	* Clone the repository project
 	* Open the Docker Desktop    
 	* Open the terminal
-	* Run a command - `docker pull elasticsearch:7.9.3` (elasticsearch image should be added to the Docker)
-	* Run a command - `docker network create mynetwork`
-	* Run a command - `docker run -d --name elasticsearch --net mynetwork -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:7.9.3` 
+	* Run a command - "docker pull elasticsearch:7.9.3" (elasticsearch image should be added to the Docker)
+	* Run a command - "docker network create mynetwork"
+	* Run a command - "docker run -d --name elasticsearch --net mynetwork -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:7.9.3" 
 	  (elasticsearch container should be running on the Docker)
 	
 
