@@ -15,6 +15,7 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
 
+
 public class deleteIndexAPITests {
 
 	static RestHighLevelClient client = new RestHighLevelClient(
@@ -45,7 +46,7 @@ public class deleteIndexAPITests {
 	
 	
 	@Test
-	public void deleteUnexistsIndexTest() throws IOException {
+	public void deleteNotExistIndexTest() throws IOException {
 		
 		DeleteIndexRequest deleteRequest = new DeleteIndexRequest("new_index1");
 		client.indices().delete(deleteRequest, RequestOptions.DEFAULT);
@@ -61,7 +62,7 @@ public class deleteIndexAPITests {
 	
 	
 	@Test 
-	public void deleteIndexByPattern() throws IOException {
+	public void deleteIndexByPatternTest() throws IOException {
 				
 		CreateIndexRequest createRrequest = new CreateIndexRequest("new_index2");
 		client.indices().create(createRrequest, RequestOptions.DEFAULT);
